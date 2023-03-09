@@ -19,3 +19,9 @@
 ### `templates`
 放置模板、視圖檔案的地方。
 
+## `TBD` 工作分配
+
+## 參考資源
+* [Flask 教學文件](https://dormousehole.readthedocs.io/en/latest/)
+* `TODO` 本專案網址
+
