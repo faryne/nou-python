@@ -14,7 +14,7 @@ jobs:
       - uses: 'google-github-actions/auth@v1'
         with:
           workload_identity_provider: "iam.googleapis.com/projects/974955743366/locations/global/workloadIdentityPools/faryne-api-workload-identity/providers/github"
-          service_account: "faryne@appspot.gserviceaccount.com"
+          service_account: "nou-python@faryne.iam.gserviceaccount.com"
       - uses: docker/build-push-action@v2
         with:
           push: true
