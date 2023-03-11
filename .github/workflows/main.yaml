@@ -23,9 +23,7 @@ jobs:
         with:
           push: true
           no-cache: true
-          tags:
-            - 'faryne/nou-python:latest'
-            - 'faryne/nou-python:${{ github.sha }}'
+          tags: 'faryne/nou-python:${{ github.sha }}'
       - uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
           service: "nou-python"
