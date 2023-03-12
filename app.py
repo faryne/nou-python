@@ -8,7 +8,9 @@ from controllers import index
 app = Flask(__name__)
 
 # 開始註冊路由
-app.add_url_rule("/", None, index.hello)    # [GET] 首頁
+app.add_url_rule("/", None, index.hello)                        # [GET] 首頁
+app.add_url_rule("/topic/<path:keyword>", None, index.topic)    # [GET] 主題頁
+app.add_url_rule("/rss/<path:keyword>", None, index.rss)        # [GET] 主題頁的 RSS 版本
 
 
 # 當執行 python3 app.py 時才會滿足條件，並執行 if 內的程式碼
