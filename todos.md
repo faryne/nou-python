@@ -17,9 +17,9 @@
 | 謝育典    | faryne@faryne.tw     | Flask 架構設定及自動化部署<br/>首頁頁面和公版編排<br/>口頭報告 | 
 | 陳柏聿    | dichotomania@gmail.com | newsapi.org API 串接                      |
 | 楊函倞    | hanjingus8@gmail.com | YouTube API 串接                          |
-| 姜惠敏    | djiang.nou@gmail.com |                                         |
-| 李卉榆    | evalee426@gmail.com  |                                         |
-| 黃意恩    | w2910222@gmail.com   |                                         |
+| 姜惠敏    | djiang.nou@gmail.com | 整合以上 API 結果並產生出 RSS Feeds                                        |
+| 李卉榆    | evalee426@gmail.com  | 整理成文字報告或簡報                                        |
+| 黃意恩    | w2910222@gmail.com   | 整合以上 API 結果並產生出顯示頁面                                        |
 
 ## 須完成項目
 ---
