@@ -2,12 +2,15 @@
 # 第一個參數會是 newsapi 所需要的 apikey
 # 第二個參數則是要搜尋的關鍵字
 
-apikey = 'ab9b50bfa2164561974d16942e1b86a7'
 
 import requests
 import json
 
+apikey = 'ab9b50bfa2164561974d16942e1b86a7'
+
+#設定起始日期
 # date_start = '2022-01-01'
+#設定結束日期
 # date_end = '2023-03-30'
 
 #搜尋頭條新聞
@@ -25,8 +28,6 @@ def search(apikey: str, keyword: str):
     return json.loads(response.text)
 
 result = search(apikey, '星宇航空')
-
-#print total results
 
 #回傳狀態
 print(result['status'])
