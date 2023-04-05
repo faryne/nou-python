@@ -2,7 +2,6 @@
 # 第一個參數會是 newsapi 所需要的 apikey
 # 第二個參數則是要搜尋的關鍵字
 
-
 import requests
 import json
 
