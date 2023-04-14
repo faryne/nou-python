@@ -1,10 +1,26 @@
-<!doctype html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Hello World</title>
-</head>
-<body>
-<h1>Hello World</h1>
-</body>
-</html>
+<!-- 使用共用版面 -->
+{%  extends "layout.html" %}
+
+{% block header %}
+    {% include "sub_blocks/header.html" %}
+{% endblock %}
+
+{% block body %}
+    <form method="get" action="{{ url_for("topic", keyword="") }}">
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">請輸入要閱覽的關鍵字主題</label>
+            <input type="text" class="form-control" id="topic" >
+        </div>
+        <button type="button" class="btn btn-primary" onclick="sendToTopic(this)">閱讀</button>
+    </form>
+    <script type="text/javascript">
+    function sendToTopic(e) {
+        let keyword = encodeURIComponent(document.getElementById("topic").value)
+        window.location = "/topic/" + keyword
+    }
+    </script>
+{% endblock %}
+
+{% block footer %}
+    {% include "sub_blocks/footer.html" %}
+{% endblock %}
