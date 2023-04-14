@@ -3,14 +3,14 @@
 # 第二個參數則是要搜尋的關鍵字
 
 
+import argparse
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+
+# 設定 API 金鑰
+DEVELOPER_KEY = 'AIzaSyAb2woptImKjZ505eIujPQLQh8lzb7qchg'
+
 def search_youtube_video(search_keyword):
-    import argparse
-    from googleapiclient.discovery import build
-    from googleapiclient.errors import HttpError
-
-    # 設定 API 金鑰
-    DEVELOPER_KEY = 'AIzaSyAb2woptImKjZ505eIujPQLQh8lzb7qchg'
-
     # 建立 YouTube API 服務物件
     youtube = build('youtube', 'v3', developerKey=DEVELOPER_KEY)
 
@@ -28,6 +28,13 @@ def search_youtube_video(search_keyword):
             if search_result['id']['kind'] == 'youtube#video':
                 print('{} ({})'.format(search_result['snippet']['title'], 
                                        search_result['id']['videoId']))
+
+        # 回傳取得的資料
+        return [{...}, {...}]
     except HttpError as e:
-        print('An HTTP error %d occurred:\n%s' % (e.resp.status, e.content))
+        # 拋出 HttpError 錯誤供呼叫端處理
+        raise e
+    finally:
+        # 回傳空陣列
+        return []
 
