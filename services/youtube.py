@@ -3,11 +3,11 @@
 # 第二個參數則是要搜尋的關鍵字
 
 
-import argparse
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
+def search_youtube_video(search_keyword):
+    import argparse
+    from googleapiclient.discovery import build
+    from googleapiclient.errors import HttpError
 
-def search_youtube_videos(search_keyword):
     # 設定 API 金鑰
     DEVELOPER_KEY = 'AIzaSyAb2woptImKjZ505eIujPQLQh8lzb7qchg'
 
