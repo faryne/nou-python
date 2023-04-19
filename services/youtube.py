@@ -23,18 +23,30 @@ def search_youtube_video(search_keyword):
             maxResults=10 # 回傳搜尋結果數量
         ).execute()
 
-        # 取出所有搜尋結果的影片標題及 ID 並印出
+        results = []
+        # 取出所有搜尋結果的影片標題、ID、描述、URL 及發佈時間並印出
         for search_result in search_response.get('items', []):
             if search_result['id']['kind'] == 'youtube#video':
-                print('{} ({})'.format(search_result['snippet']['title'], 
-                                       search_result['id']['videoId']))
+                video_title = search_result['snippet']['title']
+                video_summary = search_result['snippet']['description']
+                video_url = f"https://www.youtube.com/watch?v={search_result['id']['videoId']}"
+                video_publish_time = search_result['snippet']['publishedAt']
+                print(f"{video_title} ({video_url})")
+                print(f"Summary: {video_summary}")
+                print(f"Published Time: {video_publish_time}\n")
 
+                results.append({
+                    'video_title': video_title,
+                    'video_summary': video_summary,
+                    'video_url': video_url,
+                    'video_publish_time': video_publish_time
+                })
+        
         # 回傳取得的資料
-        return [{...}, {...}]
+        return results
     except HttpError as e:
         # 拋出 HttpError 錯誤供呼叫端處理
         raise e
     finally:
         # 回傳空陣列
         return []
-
