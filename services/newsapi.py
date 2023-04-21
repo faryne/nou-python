@@ -7,7 +7,6 @@
 #'url': 網址 , 
 #'publishedtime': 發布時間 
 
-from flask import jsonify
 import requests
 import json
 
