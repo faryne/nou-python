@@ -1,0 +1,11 @@
+{% for new in news %}
+    <div class="card main-content col-4">
+        <div class="card-body">
+            <p class="card-title">
+                <span class="badge bg-primary">newsapi</span>
+                <a class="card-title" title="原始網站">{{ new["title"] }}</a>
+            </p>
+            <p class="card-text">{{ new["content"] }}</p>
+        </div>
+    </div>
+{%  endfor %}

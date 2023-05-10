@@ -31,15 +31,14 @@ def search_youtube_video(search_keyword):
                 video_summary = search_result['snippet']['description']
                 video_url = f"https://www.youtube.com/watch?v={search_result['id']['videoId']}"
                 video_publish_time = search_result['snippet']['publishedAt']
-                print(f"{video_title} ({video_url})")
-                print(f"Summary: {video_summary}")
-                print(f"Published Time: {video_publish_time}\n")
+                video_id = search_result['id']['videoId']
 
                 results.append({
                     'video_title': video_title,
                     'video_summary': video_summary,
                     'video_url': video_url,
-                    'video_publish_time': video_publish_time
+                    'video_publish_time': video_publish_time,
+                    'video_id': video_id
                 })
         
         # 回傳取得的資料
@@ -47,6 +46,3 @@ def search_youtube_video(search_keyword):
     except HttpError as e:
         # 拋出 HttpError 錯誤供呼叫端處理
         raise e
-    finally:
-        # 回傳空陣列
-        return []
