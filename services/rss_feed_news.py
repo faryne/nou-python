@@ -7,7 +7,6 @@ from newsapi import NewsApiClient
 app = Flask(__name__)
 
 # Initialize NewsApiClient
-# newsapi = NewsApiClient(api_key="74eda8d3d1bc4243a9c3854f1d01712e")
 newsapi = NewsApiClient(api_key="20611c0ca5c742bdb5fe4facec17e522")
 
 # 新聞資料
@@ -43,11 +42,11 @@ def rss_feed():
     return Response(rss, mimetype='text/xml')
 
 
-@app.route('/search_news/<q>/<language>')
-def search_news(q, language):
+@app.route('/search_news/<keyword>')
+def search_news(keyword):
     global news
     # response = newsapi.get_everything(q="台中捷運", language='zh')
-    response = newsapi.get_everything(q=q, language=language)
+    response = newsapi.get_everything(q=keyword, language='zh')
     news = response['articles']
     rss = generate_rss_feed()
     return Response(rss, mimetype='text/xml')
@@ -55,6 +54,3 @@ def search_news(q, language):
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
-
-rss_result = search_news("台中捷運",'zh')
-# 輸出網址 http://127.0.0.1:5000/search_news/%E5%8F%B0%E4%B8%AD%E6%8D%B7%E9%81%8B/zh
