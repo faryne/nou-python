@@ -9,8 +9,9 @@
 
 import requests
 import json
+import os
 
-apikey = 'ab9b50bfa2164561974d16942e1b86a7'
+apikey = os.getenv("NEWSAPI_KEY")
 apibaseurl = 'https://newsapi.org/v2/'
 #設定起始日期
 # date_start = '2022-01-01'

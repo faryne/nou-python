@@ -6,9 +6,10 @@
 import argparse
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+import os
 
 # 設定 API 金鑰
-DEVELOPER_KEY = 'AIzaSyAb2woptImKjZ505eIujPQLQh8lzb7qchg'
+DEVELOPER_KEY = os.getenv("YOUTUBE_APIKEY")
 
 def search_youtube_video(search_keyword):
     # 建立 YouTube API 服務物件

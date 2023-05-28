@@ -31,3 +31,6 @@ jobs:
           service: "nou-python"
           region: "asia-east1"
           image: "faryne/nou-python:${{ github.sha }}"
+          secrets:
+            NEWSAPI_KEY=${{ secrets.NEWSAPI_KEY }}
+            YOUTUBE_APIKEY=${{ secrets.YOUTUBE_APIKEY }}

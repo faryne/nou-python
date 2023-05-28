@@ -6,21 +6,8 @@
 {% endblock %}
 
 {% block body %}
-    <form method="get" action="{{ url_for("topic", keyword="") }}">
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">請輸入要閱覽的關鍵字主題</label>
-            <input type="text" class="form-control" id="topic" value="{{ keyword }}">
-        </div>
-        <button type="button" class="btn btn-primary" onclick="sendToTopic(this)">閱讀</button>
-    </form>
     {% include "sub_blocks/news_block.html" %}
     {% include "sub_blocks/youtube_block.html" %}
-    <script type="text/javascript">
-    function sendToTopic(e) {
-        let keyword = encodeURIComponent(document.getElementById("topic").value)
-        window.location = "/topic/" + keyword
-    }
-    </script>
 {% endblock %}
 
 {% block footer %}
