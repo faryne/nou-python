@@ -3,7 +3,7 @@ from flask import request
 
 from services import youtube, newsapi, rss_feed
 
-default_keyword = "台中捷運"
+default_keyword = "\"2024總統\""
 
 # 首頁：顯示查詢輸入框
 def hello():
@@ -11,6 +11,7 @@ def hello():
     resp_youtube = youtube.search_youtube_video(keyword)
     resp_newsapi = newsapi.search(keyword)
     return flask.render_template("index.html",
+                                 keyword=keyword,
                                  videos=resp_youtube,
                                  news=resp_newsapi)
 

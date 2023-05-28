@@ -6,8 +6,9 @@
 3. 接著切換到目錄內。如果沒做什麼操作的話，應該只要下 `cd nou-python` 即可。
 4. 執行 `python3 -m venv .venv` 以建立一個虛擬環境，所有專案所需的東西會以這個虛擬環境中為主而不會去看系統的。之後安裝的套件也是安裝到該目錄。
 5. 執行 `.venv/Scripts/activate.bat` 啟用虛擬環境
-6. 執行以下指令安裝所需要的 python 套件：`python3 -m pip install -r requirements.txt`
-7. 執行以下指令：`python3 -m flask run`，然後打開瀏覽器輸入 `http://localhost:5000` 即可。
+6. 將 `.env.example` 複製為 .env ，並將 `NEWSAPI_KEY` 及 `YOUTUBE_APIKEY` 分別填入 `newsapi.org` 以及 `Youtube` 的 apikey
+7. 執行以下指令安裝所需要的 python 套件：`python3 -m pip install -r requirements.txt`
+8. 執行以下指令：`python3 -m flask run`，然後打開瀏覽器輸入 `http://localhost:5000` 即可。
 
 ## 目錄說明
 ### `controllers`
@@ -19,9 +20,10 @@
 ### `templates`
 放置模板、視圖檔案的地方。
 
-## `TBD` 工作分配
+## 工作分配
+[請參考](./todos.md)
 
 ## 參考資源
 * [Flask 教學文件](https://dormousehole.readthedocs.io/en/latest/)
-* `TODO` 本專案網址
+* [專案網址](https://nou-python.maid.tw)
 

@@ -11,15 +11,15 @@
 * 網站放置在 Google Cloud Platform 的 Cloud Run 服務上執行
 
 ## 組員名單及工作分配
-| 姓名     | email                | 工作分配                                    |
-|--------|----------------------|-----------------------------------------|
-| *I 組 Python 奇妙之旅* |                             | 
-| 謝育典    | faryne@faryne.tw     | Flask 架構設定及自動化部署<br/>首頁頁面和公版編排<br/>口頭報告 | 
-| 陳柏聿    | dichotomania@gmail.com | newsapi.org API 串接                      |
-| 楊函倞    | hanjingus8@gmail.com | YouTube API 串接                          |
-| 姜惠敏    | djiang.nou@gmail.com | 整合以上 API 結果並產生出 RSS Feeds                                        |
-| 李卉榆    | evalee426@gmail.com  | 整理成文字報告或簡報                                        |
-| 黃意恩    | w2910222@gmail.com   | 整合以上 API 結果並產生出顯示頁面                                        |
+| 姓名                     | 工作分配                                    |
+|--------|-----------------------------------------|
+| *I 組 Python 奇妙之旅* |                                         | 
+| 謝育典    | Flask 架構設定及自動化部署<br/>首頁頁面和公版編排<br/>口頭報告 | 
+| 陳柏聿    | newsapi.org API 串接                      |
+| 楊函倞    | YouTube API 串接                          |
+| 姜惠敏    |  整合以上 API 結果並產生出 RSS Feeds                                        |
+| 李卉榆    |  整理成文字報告或簡報                                        |
+| 黃意恩    | 整合以上 API 結果並產生出顯示頁面                                        |
 
 ## 須完成項目
 ---

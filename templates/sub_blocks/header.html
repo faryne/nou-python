@@ -2,14 +2,19 @@
 <h1>新聞摘要器</h1>
 <form method="get" action="{{ url_for("topic", keyword="") }}">
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">請輸入要閱覽的關鍵字主題</label>
-        <input type="text" class="form-control" id="topic" >
+        <label for="exampleInputEmail1" class="form-label">請輸入要閱覽的關鍵字主題，使用 " 可精確查詢</label>
+        <input value="{{ keyword }}" type="text" class="form-control" id="topic" placeholder='請輸入要閱覽的關鍵字主題，使用 " 可精確查詢' >
     </div>
     <button type="button" class="btn btn-primary" onclick="sendToTopic(this)">閱讀</button>
+    <button type="button" class="btn btn-primary" onclick="rssLink(this)">訂閱目前的關鍵字</button>
 </form>
 <script type="text/javascript">
     function sendToTopic(e) {
         let keyword = encodeURIComponent(document.getElementById("topic").value)
-        window.location = "/topic/" + keyword
+        window.location = "/topic?keyword=" + keyword
+    }
+    function rssLink(e) {
+        let keyword = encodeURIComponent(document.getElementById("topic").value)
+        window.location = "/rss?keyword=" + keyword
     }
 </script>
