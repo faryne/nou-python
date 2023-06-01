@@ -1,6 +1,5 @@
 # 呼叫 newsapi 並傳回搜尋結果
-# 第一個參數會是 newsapi 所需要的 apikey
-# 第二個參數則是要搜尋的關鍵字
+# 第一個參數會是要搜尋的關鍵字
 
 #'title': 新聞標題 , 
 #'content': 新聞摘要 ,
@@ -68,4 +67,3 @@ def search(keyword):
 
 if __name__ == '__main__':
     result = search('國民黨')
-    # print(result)
