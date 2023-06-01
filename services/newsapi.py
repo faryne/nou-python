@@ -54,7 +54,6 @@ def search(keyword):
     if response.status_code == 200:
         json_response = json.loads(response.text)
         news_lists = []
-        print(len(json_response['articles']))
         for article in json_response['articles']:
             news = {
                 'title': article['title'],
